@@ -4,6 +4,11 @@ const initialState = [
     text: "I am Totally Lost",
     completed: false,
     id: 0
+  },
+  {
+    text: "Here I am ",
+    completed: false,
+    id: 1
   }
 ];
 

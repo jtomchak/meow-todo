@@ -4,11 +4,10 @@ import Header from "./Header";
 import MainSection from "./MainSection";
 
 const App = props => {
-  console.log(props.todos);
   return (
     <div>
       <Header />
-      <MainSection />
+      <MainSection todos={props.todos} />
     </div>
   );
 };
