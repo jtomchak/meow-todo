@@ -1,4 +1,5 @@
 import { compose } from "redux";
+import * as types from "../ActionTypes";
 const initialState = [
   {
     text: "I am Totally Lost",
@@ -14,7 +15,7 @@ const initialState = [
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
-    case "ADD_TODO":
+    case types.ADD_TODO:
       return [
         ...state,
         {
