@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import Header from "./Header";
 import MainSection from "./MainSection";
 
+// import { addTodo } from "../actions";
+import * as TodoActions from "../actions";
+
 const App = props => {
+  const { todos, actions } = props;
   return (
     <div>
-      <Header />
-      <MainSection todos={props.todos} />
+      <Header addTodo={actions.addTodo} />
+      <MainSection todos={todos} />
     </div>
   );
 };
@@ -16,4 +21,8 @@ const mapStatetoProps = state => ({
   todos: state.todos
 });
 
-export default connect(mapStatetoProps)(App);
+const mapDispatchtoProps = dispatch => ({
+  actions: bindActionCreators(TodoActions, dispatch)
+});
+
+export default connect(mapStatetoProps, mapDispatchtoProps)(App);
