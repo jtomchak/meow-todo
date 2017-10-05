@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import classnames from "classnames";
 
+import TodoItem from "./TodoItem";
+
 class MainSection extends Component {
   render() {
     const todoItems = this.props.todos.map(todo => (
-      <li
-        className={classnames({
-          completed: todo.completed
-        })}
-      >
-        {todo.text}
-      </li>
+      <TodoItem key={todo.id} todo={todo} {...this.props.actions} />
     ));
     return (
       <section className="main">
