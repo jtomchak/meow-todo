@@ -15,4 +15,8 @@
   4. Now instead of a list item for out todo's we'll have a component called TodoItem that will render each of our todo's
   5.  Each TodoItem should have an input checkbox to call the completed todo action, and mark it as such in the component.
 
-  ## Day 2
+## Day 2
+* Step-6 Todo Input Component
+* Step-7 Mark Todo Completed with Reducer and Action
+* Step-8 CSS Fixes for todoMVC
+* Step-9 Delete Todo, Edit Todo in place
