@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import classnames from "classnames";
 
 class TodoTextInput extends Component {
   state = {
@@ -20,6 +21,10 @@ class TodoTextInput extends Component {
   render() {
     return (
       <input
+        className={classnames({
+          edit: this.props.editing,
+          "new-todo": true
+        })}
         placeholder="et tu to do?"
         value={this.state.text}
         autoFocus="true"

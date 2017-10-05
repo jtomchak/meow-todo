@@ -5,8 +5,10 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <h2 className="header">Meow Todo</h2>
-        <TodoTextInput onSave={this.props.addTodo} placeholder="meow what?" />
+        <header className="header">
+          <h1>Meow Todos</h1>
+          <TodoTextInput onSave={this.props.addTodo} placeholder="meow what?" />
+        </header>
       </div>
     );
   }
