@@ -3,7 +3,7 @@ import classnames from "classnames";
 
 class TodoTextInput extends Component {
   state = {
-    text: this.props.text || ""
+    text: ""
   };
 
   handleSubmit = event => {
